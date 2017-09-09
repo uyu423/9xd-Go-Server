@@ -9,17 +9,18 @@
     "body-parser": "^1.18.0",
     "express": "^4.15.4",
     "getconfig": "^3.1.0",
+    "lodash": "^4.17.4",
     "morgan": "^1.8.2",
     "mysql2": "^1.4.2",
     "pm2": "^2.6.1",
     "sequelize": "^4.8.2"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development pm2-dev index.js",
-    "start": "cross-env NODE_ENV=production pm2 -i 0 start index.js --name 9XD_GO",
+    "dev": "npm run sync && cross-env NODE_ENV=development pm2-dev index.js",
+    "start": "yarn && cross-env NODE_ENV=production pm2 -i 0 start index.js --name 9XD_GO",
     "stop": "pm2 stop 9XD_GO",
-    "reload": "pm2 reload 9XD_GO",
-    "sync": "./node_modules/.bin/sequelize-auto -o \"./model\" -h \"uyu423.iptime.org\" -d \"9xdgo\" -u \"9xdgo\" -p 3306 -x \"1q2w3e4r\" -e mysql -C -a \"./sequelizeModelOptions.json\" -t user && eslint --fix ./model"
+    "reload": "yarn && pm2 reload 9XD_GO",
+    "sync": "./node_modules/.bin/sequelize-auto -o \"./model\" -h \"uyu423.iptime.org\" -d \"9xdgo\" -u \"9xdgo\" -p 3306 -x \"1q2w3e4r\" -e mysql -C -a \"./sequelizeModelOptions.json\" -t user,place,product,rPlaceProductReward,rUserPlaceConquest && eslint --fix ./model"
   },
   "devDependencies": {
     "eslint": "^3.19.0 || ^4.3.0",
