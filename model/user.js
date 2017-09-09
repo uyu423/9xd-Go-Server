@@ -24,10 +24,10 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       field: 'authToken',
     },
-    refreshToken: {
+    thumbnailUrl: {
       type: DataTypes.STRING(255),
       allowNull: true,
-      field: 'refreshToken',
+      field: 'thumbnailUrl',
     },
     createdAt: {
       type: DataTypes.DATE,

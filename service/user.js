@@ -14,9 +14,9 @@ async function findUserByFacebookId({ fbId }) {
   return user;
 }
 
-async function createUserUsingFacebookOAuth({ fbId, name, authToken, refreshToken }) {
+async function createUserUsingFacebookOAuth({ fbId, name, authToken, thumbnailUrl }) {
   const user = await User.create({
-    fbId, name, authToken, refreshToken,
+    fbId, name, authToken, thumbnailUrl,
   });
   return user;
 }
