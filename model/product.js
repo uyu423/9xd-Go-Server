@@ -24,6 +24,26 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: true,
       field: 'description',
     },
+    stock: {
+      type: DataTypes.INTEGER(10).UNSIGNED,
+      allowNull: true,
+      field: 'stock',
+    },
+    ordered: {
+      type: DataTypes.INTEGER(10).UNSIGNED,
+      allowNull: true,
+      field: 'ordered',
+    },
+    price: {
+      type: DataTypes.INTEGER(10).UNSIGNED,
+      allowNull: true,
+      field: 'price',
+    },
+    sale: {
+      type: DataTypes.INTEGER(11),
+      allowNull: true,
+      field: 'sale',
+    },
     createdAt: {
       type: DataTypes.DATE,
       allowNull: false,

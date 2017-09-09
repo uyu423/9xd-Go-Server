@@ -19,6 +19,11 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: true,
       field: 'description',
     },
+    address: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+      field: 'address',
+    },
     latittude: {
       type: 'DOUBLE',
       allowNull: false,
