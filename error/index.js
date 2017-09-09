@@ -1,0 +1,1 @@
+exports.NotImplementedException = require('./NotImplementedException');
