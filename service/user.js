@@ -5,7 +5,6 @@ exports.sign = async function sign(params) {
   if (!user || user === {}) {
     await createUserUsingFacebookOAuth(params);
     user = await findUserByFacebookId(params);
-    c;
   }
   return user;
 };
